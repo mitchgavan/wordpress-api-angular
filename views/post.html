@@ -1,0 +1,14 @@
+
+<section>
+	<div ng-hide="dataLoaded">Loading...</div>
+	<article class="well">
+		<header>
+			<h1>
+				{{post.title.rendered}}
+			</h1>
+		</header>
+		<div class="post-content" ng-bind-html="post.content.rendered">
+			{{post.content.rendered}}
+		</div>
+	</article>
+</section>
