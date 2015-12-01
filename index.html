@@ -17,11 +17,12 @@
         <![endif]-->
         
         <div class="container">
-            <p>Hello world! Here we are going to attempt to display Wordpress posts using Angular and the Wordpress REST API.</p>
-        
+            <ul class="nav nav-pills">
+                <li><a ui-sref="blog">Home</a></li>
+                <li><a ui-sref="about">About</a></li>
+            </ul>
             <div ui-view></div>
         </div>
-        
         
         <script src="vendor/modernizr-2.8.3.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
@@ -31,5 +32,6 @@
         <script src="app/common/services/BlogService.js"></script>
         <script src="app/blog/blog-controller.js"></script>
         <script src="app/blog/post-controller.js"></script>
+        <script src="app/about/about-controller.js"></script>
     </body>
 </html>

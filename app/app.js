@@ -31,5 +31,11 @@ angular
         templateUrl: "app/blog/post.tpl.html",
         controller: "PostCtrl",
         controllerAs: "ctrl"
+      })
+      .state('about', {
+        url: "/about",
+        templateUrl: "app/about/about.tpl.html",
+        controller: "AboutCtrl",
+        controllerAs: "ctrl"
       });
   });
