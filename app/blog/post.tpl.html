@@ -3,12 +3,11 @@
 	<div ng-hide="ctrl.dataLoaded">Loading...</div>
 	<article class="well">
 		<header>
-			<h1>
-				{{ctrl.post.title.rendered}}
-			</h1>
+			<h1 ng-bind-html="ctrl.post.title.rendered"></h1>
+			<p class="text-muted">
+				{{ctrl.post.date | date:'dd/MM/yyyy'}}
+			</p>
 		</header>
-		<div class="post-content" ng-bind-html="ctrl.post.content.rendered">
-			{{ctrl.post.content.rendered}}
-		</div>
+		<div class="post-content" ng-bind-html="ctrl.post.content.rendered"></div>
 	</article>
 </section>

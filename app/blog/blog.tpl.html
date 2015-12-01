@@ -3,13 +3,12 @@
 	<div ng-hide="ctrl.dataLoaded">Loading...</div>
 	<article class="well" ng-repeat="post in ctrl.posts">
 		<header>
-			<h1 ng-bind-html="post.title.rendered">
-				{{post.title.rendered}}
-			</h1>
+			<h1 ng-bind-html="post.title.rendered"></h1>
+			<p class="text-muted">
+				{{post.date | date:'dd/MM/yyyy'}}
+			</p>
 		</header>
-		<div ng-bind-html="post.excerpt.rendered">
-			{{post.excerpt.rendered}}
-		</div>
-		<a ui-sref="post({id: post.id})">Read more</a>
+		<div ng-bind-html="post.excerpt.rendered"></div>
+		<a class="btn btn-default" ui-sref="post({id: post.id})">Read more</a>
 	</article>
 </section>
