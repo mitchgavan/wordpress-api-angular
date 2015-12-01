@@ -22,13 +22,13 @@ angular
     $stateProvider
       .state('blog', {
         url: "/",
-        templateUrl: "views/blog.html",
+        templateUrl: "app/blog/blog.tpl.html",
         controller: "BlogCtrl",
         controllerAs: "ctrl"
       })
       .state('post', {
         url: "/post/:id",
-        templateUrl: "views/post.html",
+        templateUrl: "app/blog/post.tpl.html",
         controller: "PostCtrl",
         controllerAs: "ctrl"
       });
