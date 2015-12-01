@@ -1,14 +1,18 @@
 'use strict';
  
 angular.module('angularWP')
-	.controller('BlogCtrl', function($http, wordpressApi, $stateParams) {
+	.controller('BlogCtrl', function($http, BlogService, $stateParams) {
 		var ctrl = this;
 		
 		ctrl.dataLoaded = false;
 		
-        wordpressApi.getPosts(function(response) {
-			ctrl.posts = response.data;
-			ctrl.dataLoaded = true;
-		});
-	
+		ctrl.getPosts = function () {
+		  BlogService.allPosts()
+			.then(function (result) {
+			  ctrl.posts = result;
+			  ctrl.dataLoaded = true;
+			});
+		};
+		
+		ctrl.getPosts();
     });
