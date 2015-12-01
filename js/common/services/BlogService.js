@@ -12,4 +12,8 @@ angular.module('angularWP')
       return $http.get(ENDPOINT_URI + '/posts/').then(extract);
     };
     
+    service.singlePost = function (id) {
+      return $http.get(ENDPOINT_URI + '/posts/' + id).then(extract);
+    };
+    
 });
