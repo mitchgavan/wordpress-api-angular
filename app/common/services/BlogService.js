@@ -21,7 +21,7 @@ angular.module('angularWP')
     };
     
     service.postsByCategory = function (category) {
-      return $http.get(ENDPOINT_URI + 'posts/?filter[category_name=]' + category).then(extract);
+      return $http.get(ENDPOINT_URI + 'posts/?filter[category_name]=' + category).then(extract);
     };
     
 });
