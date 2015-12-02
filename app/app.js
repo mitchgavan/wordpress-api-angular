@@ -26,6 +26,12 @@ angular
         controller: "BlogCtrl",
         controllerAs: "ctrl"
       })
+      .state('blogCategory', {
+        url: "/:categorySlug",
+        templateUrl: "app/blog/blog-category.tpl.html",
+        controller: "BlogCategoryCtrl",
+        controllerAs: "ctrl"
+      })
       .state('post', {
         url: "/post/:slug",
         templateUrl: "app/blog/post.tpl.html",

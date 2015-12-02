@@ -4,13 +4,14 @@ angular.module('angularWP')
 	.controller('BlogCtrl', function($http, BlogService, $stateParams) {
 		var ctrl = this;
 		
-		ctrl.dataLoaded = false;
+		ctrl.postsLoaded = false;
+		ctrl.categoriesLoaded = false;
 		
 		ctrl.getPosts = function () {
 		  BlogService.allPosts()
 			.then(function (result) {
 			  ctrl.posts = result;
-			  ctrl.dataLoaded = true;
+			  ctrl.postsLoaded = true;
 			});
 		};
 		
@@ -18,6 +19,7 @@ angular.module('angularWP')
 		  BlogService.categories()
 			.then(function (result) {
 			  ctrl.categories = result;
+			  ctrl.categoriesLoaded = true;
 			});
 		};
 		

@@ -20,4 +20,8 @@ angular.module('angularWP')
       return $http.get(ENDPOINT_URI + 'terms/category/?filter[name]').then(extract);
     };
     
+    service.postsByCategory = function (category) {
+      return $http.get(ENDPOINT_URI + 'posts/?filter[category_name=]' + category).then(extract);
+    };
+    
 });
