@@ -7,5 +7,5 @@ Currently displays a list of posts, posts by category, and single posts based on
 
 1. Install and activate the [WP REST API plugin](http://v2.wp-api.org/) on your Wordpress website via the admin panel.
 
-2. Change the `ENDPOINT_URI' constant on line 12 of `app.js` to reference your Wordpress site's URL
+2. Change the `ENDPOINT_URI` constant on line 12 of `app.js` to reference your Wordpress site's URL
 
