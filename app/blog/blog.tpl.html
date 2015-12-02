@@ -1,6 +1,14 @@
-<h2>Posts</h2>
+
 <section>
 	<div ng-hide="ctrl.dataLoaded">Loading...</div>
+	
+	<h2>Categories</h2>
+	<ul>
+		<li ng-repeat="category in ctrl.categories">
+			<a href="#" ng-bind-html="category.name"></a>
+		</li>
+	</ul>
+	
 	<article class="well" ng-repeat="post in ctrl.posts">
 		<header>
 			<h1 ng-bind-html="post.title.rendered"></h1>

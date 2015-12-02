@@ -14,5 +14,13 @@ angular.module('angularWP')
 			});
 		};
 		
+		ctrl.getCategories = function () {
+		  BlogService.categories()
+			.then(function (result) {
+			  ctrl.categories = result;
+			});
+		};
+		
 		ctrl.getPosts();
+		ctrl.getCategories();
     });

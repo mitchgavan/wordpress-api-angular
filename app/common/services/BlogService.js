@@ -9,11 +9,15 @@ angular.module('angularWP')
     }
     
     service.allPosts = function () {
-      return $http.get(ENDPOINT_URI + '/posts/').then(extract);
+      return $http.get(ENDPOINT_URI + 'posts/').then(extract);
     };
     
     service.singlePost = function (slug) {
-      return $http.get(ENDPOINT_URI + '/posts/?filter[name]=' + slug).then(extract);
+      return $http.get(ENDPOINT_URI + 'posts/?filter[name]=' + slug).then(extract);
+    };
+    
+    service.categories = function () {
+      return $http.get(ENDPOINT_URI + 'terms/category/?filter[name]').then(extract);
     };
     
 });
