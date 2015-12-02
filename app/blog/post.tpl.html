@@ -1,7 +1,7 @@
 
 <section>
 	<div ng-hide="ctrl.dataLoaded">Loading...</div>
-	<article class="well">
+	<article ng-hide="!ctrl.dataLoaded" class="well">
 		<header>
 			<h1 ng-bind-html="ctrl.post.title.rendered"></h1>
 			<p class="text-muted">

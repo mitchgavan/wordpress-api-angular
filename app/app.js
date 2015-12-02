@@ -27,7 +27,7 @@ angular
         controllerAs: "ctrl"
       })
       .state('post', {
-        url: "/post/:id",
+        url: "/post/:slug",
         templateUrl: "app/blog/post.tpl.html",
         controller: "PostCtrl",
         controllerAs: "ctrl"

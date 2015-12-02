@@ -7,9 +7,9 @@ angular.module('angularWP')
 		ctrl.dataLoaded = false;
 		
 		ctrl.getPost = function () {
-		  BlogService.singlePost($stateParams.id)
+		  BlogService.singlePost($stateParams.slug)
 			.then(function (result) {
-			  ctrl.post = result;
+			  ctrl.post = result[0];
 			  ctrl.dataLoaded = true;
 			});
 		};
